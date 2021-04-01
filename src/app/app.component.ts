@@ -1,10 +1,22 @@
 import { Component } from '@angular/core';
 
+// Java - annotation
+// NET - razor
+// Typescript - decorator 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
+  selector: 'app-root', // component tag
+  templateUrl: './app.component.html', // view 
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-first-app';
+  // properties or model
+  title = 'Welcome to App Component'; // model
+
+  // to initialize the properties of class
+   constructor(){
+     console.log('App Component Instantiated..')
+   }
+
 }
+
+// Angular - xxxxx = new AppComponent()
