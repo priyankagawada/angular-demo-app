@@ -324,4 +324,13 @@ Developing a Component
       CommonModule // child  module
    ]
 })
- 
+
+* To create a module
+ng new module dashboard
+
+* To create a component and register in the dashboard module
+ng generate component contact --module=dashboard 
+
+* To skip test files while creating component
+ng generate component contact --module=dashboard --skip-tests true
+
