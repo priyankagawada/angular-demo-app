@@ -1,25 +1,54 @@
 <p>patient works!</p>
 
+<button 
+class="btn btn-primary" 
+[disabled]="enableButton"
+(click)="updatePhoto()"
+> 
+    Edit Patient Data </button>
+<p> value -  {{ enableButton }}</p>
+
+
 <!-- value from patientlist-->
+<div class="container">
+   <div class="row">
+      <div class="col-sm-4">
+         <ul>
+            <li> {{patientList[0].patientId}} </li>
+            <li> {{patientList[0].patientName}} </li>
+            <li> <img [src]="patientList[0].photo" 
+                      width="50"
+                      height="50"
+                      alt="no image" 
+                    />   
+            </li>
+            <li> {{patientList[0].age}} </li>
+         </ul>
+      </div>
 
-   <ul>
-       <li> {{patientList[0].patientId}}  </li>
-       <li> {{patientList[0].patientName}} </li>
-       <li> {{patientList[0].photo}} </li>
-       <li> {{patientList[0].age}} </li>
-    </ul>
+      <div class="col-sm-4">
+         <ul>
+            <li> {{patientList[1].patientId}} </li>
+            <li> {{patientList[1].patientName}} </li>
+            <li> <img [src]="patientList[1].photo" 
+               width="50"
+               height="50"
+              />   </li>
+            <li> {{patientList[1].age}} </li>
+         </ul>
+      </div>
 
-
-    <ul>
-        <li> {{patientList[1].patientId}}  </li>
-        <li> {{patientList[1].patientName}} </li>
-        <li> {{patientList[1].photo}} </li>
-        <li> {{patientList[1].age}} </li>
-     </ul>
-
-     <ul>
-        <li> {{patientList[2].patientId}}  </li>
-        <li> {{patientList[2].patientName}} </li>
-        <li> {{patientList[2].photo}} </li>
-        <li> {{patientList[2].age}} </li>
-     </ul>
+      <div class="col-sm-4">
+         <ul>
+            <li> {{patientList[2].patientId}} </li>
+            <li> {{patientList[2].patientName}} </li>
+            <li> <img [src]="patientList[2].photo" 
+               width="50"
+               height="50"
+              />  </li>
+            <li> {{patientList[2].age}} </li>
+         </ul>
+      </div>
+      
+   </div>
+</div>
