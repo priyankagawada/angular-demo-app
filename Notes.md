@@ -326,11 +326,13 @@ Developing a Component
 })
 
 * To create a module
+
 ng new module dashboard
-
+--------------------------------------------------------------------------------------------------------------------------
 * To create a component and register in the dashboard module
-ng generate component contact --module=dashboard 
 
+ng generate component contact --module=dashboard 
+---------------------------------------------------------------------------------------------------------------------------
 * To skip test files while creating component
 ng generate component contact --module=dashboard --skip-tests true
 
@@ -364,5 +366,6 @@ ngModel - Directive (Use it with Form control to update the component properties
 (ngModelChange)=update the value from HTML element to the component property
 
 Binds the property and raises event when value is updated inside the component.
+
 
 
