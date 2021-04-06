@@ -334,3 +334,35 @@ ng generate component contact --module=dashboard
 * To skip test files while creating component
 ng generate component contact --module=dashboard --skip-tests true
 
+=========================================================
+Angular follows a mechanism called as Change detect mechanism in its framwork
+
+What that means:
+
+Component                      -------------------------------------------> Template
+
+firstname="john"                          {{ firstname }}
+
+When page is displayed,     firstname = "john"
+
+Later if value of firstname is updated    firstname ="jill" inside the component class, angular runs CDM.
+
+Change detection mechanism works- when component property is updated, the template also gets updated with the new value for the property
+
+firstname = "jill   ---->  {{firtname }} ---> jill
+
+default behaviour - if any binded proeprty is updated in the component class, then the change detection algorithm will be executed.
+
+* Can we push change detection mechanism to run at a specific time?
+ Find - whete I do the config to achieve this.
+=================================================================
+Two-way data binding
+------------------------------
+ngModel - Directive (Use it with Form control to update the component properties)
+[( ngModel  )] = "firstname"
+
+(ngModelChange)=update the value from HTML element to the component property
+
+Binds the property and raises event when value is updated inside the component.
+
+
