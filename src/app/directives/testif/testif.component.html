@@ -1,0 +1,18 @@
+<h1> Testing ngIf-else Directive</h1>
+
+<!--  a > b  ? 'a'   : 'b' -->
+<button class="btn btn-primary" (click)="updateImageDisplay()">
+         {{ show ? 'Hide' : 'Show' }}
+</button>
+<br/>
+
+<!-- show an image based on some condition-->
+<ng-container *ngIf="show ; else noImageBlock">
+    <div style="border: 2px solid blue; width: 300px">
+       <img [src]="iconUrl" width="100px" height="100px"/> 
+    </div>   
+</ng-container>
+
+<ng-template #noImageBlock>
+    <p> No Image avaiable for display! </p>
+</ng-template>

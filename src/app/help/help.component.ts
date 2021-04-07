@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HelpComponent implements OnInit {
 
+  firstname:string = 'john';
+  show: boolean = false;
+
   constructor() {
     console.log('help component instantaited...')
    }
@@ -14,4 +17,16 @@ export class HelpComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  updateFirstName(event: any)
+  {
+     // get the value property here
+    // console.log(event.value);
+    console.log((<HTMLInputElement>event.target).value);
+    this.firstname = (<HTMLInputElement>event.target).value
+
+  }
+
+  display(){
+    console.log('firstname', this.firstname)
+  }
 }

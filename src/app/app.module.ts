@@ -5,11 +5,17 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { AppComponent } from './app.component';
 import { PatientComponent } from './patient/patient.component';
 import { AppointmentComponent } from './appointment/appointment.component';
+import { TestifComponent } from './directives/testif/testif.component';
+import { TestforComponent } from './directives/testfor/testfor.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 @NgModule({
   declarations: [
-    AppComponent, PatientComponent, AppointmentComponent
+    AppComponent, PatientComponent, 
+    AppointmentComponent, TestifComponent, 
+    TestforComponent, 
+    HighlightDirective
   ],
   imports: [
     BrowserModule,  //child Modules,

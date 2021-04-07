@@ -1,0 +1,32 @@
+<!-- directives can get the information about its elements
+     on which it is applied-->
+<p appHighlight>testfor works!</p>
+
+<div>
+    <ul>
+       <li *ngFor="let e of employees ; index as i "
+            [ngStyle]="{'color': getColor(e.age)}">
+              {{i+1}} =  {{e.id}} - {{e.name}} - {{e.age}}
+      </li>
+    </ul>
+</div>
+
+<table class="table">
+    <tr *ngFor="let e of employees; odd as isOdd; even as isEven" 
+        [ngClass]="{odd : isOdd, even: isEven}">
+        <td> {{e.id}} </td>
+        <td> {{e.name}} </td>
+        <td> {{e.age}} </td>
+    </tr>
+</table>
+<!-- employee id in the list-->
+<!-- atatch a event to display employees details based on selected if-->
+<select>
+    <option *ngFor="let e of employees"> {{e.id}}</option>
+</select>
+
+
+
+
+
+

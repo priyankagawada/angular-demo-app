@@ -1,0 +1,29 @@
+<p>contact works!</p>
+<div class="container">
+<div class="row">
+    <div class="col-xs-12">
+
+        <p> Add Contact Details </p>
+        <label> First Name: </label>
+        <input type="text" 
+               class="form-control" 
+               [(ngModel)]="firstname" />
+
+        <label> Email Name: </label>
+        <input type="text" class="form-control" 
+                           [(ngModel)]="email" />
+
+        <br />
+
+        <button class="btn btn-primary" 
+                (click)="onAddContact()"> 
+                Add Contact </button>
+
+
+        <button class="btn btn-primary" 
+                (click)="onAddContactBlue()"> 
+                 Add Contact Blue </button>
+
+    </div>
+</div>
+</div>

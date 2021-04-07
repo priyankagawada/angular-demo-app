@@ -1,1 +1,26 @@
 <p>help works!</p>
+<hr />
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-4">
+            <input type="text" 
+            class="form-control"  
+            [value]="firstname"
+            [(ngModel)]="firstname" 
+             />
+           
+       <!-- <p> value  - {{ firstname }}</p>  -->
+        <div  style="color:green;" *ngIf="show">
+            The block is generated and visible when condition is true
+        </div>
+
+        <div  style="color:red;" *ngIf="!show">
+            The block is generated and visible when condition is false
+        </div>
+
+           <button (click)="display()"> Display  </button>
+
+       </div>
+    </div>
+</div>
