@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   // properties or model
   title = 'Welcome to App Component'; // model
-
+  color:string='red';
   // to initialize the properties of class
    constructor(){
      console.log('App Component Instantiated..')
